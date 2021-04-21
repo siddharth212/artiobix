@@ -1,0 +1,43 @@
+@layout('layouts.app')
+ 
+@section('content')
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/log1.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="page-heading">
+          <h1>Login</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <br>
+
+   <div class="loginbox">
+    <img src="avatar.png" class="avatar">
+        <h1>Login Here</h1>
+        <form action="/log" method="POST" encType="multipart/form-data">
+            <p>Username or email</p>
+            <input type="email" name="email" placeholder="Email" >
+            <p>Password</p>
+             <input type="password" name="password" placeholder="Password" >
+            <input type="submit" name="" value="Login">
+            
+        </form>
+        
+    </div>
+    <br>
+  <br>
+</header>
+ 
+
+
+
+ 
+
+
+
+@endsection

@@ -1,0 +1,63 @@
+@layout('layouts.app')
+ 
+@section('content')
+<!-- Page Header -->
+<header class="masthead" style="background-image: url('img/h.jpg')">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="site-heading">
+          <h1>Start Affiliate Marketing At No Cost</h1>
+          <span class="subheading">A Platform For Affiliate Marketers</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+ 
+<!-- Main Content -->
+<div class="container">
+
+  <div class="row">
+  
+    <div class="col-lg-8 col-md-10 mx-auto">
+    <br>
+      <h1>Our Recently Added Products</h1>
+      <br>
+      <br>
+      @each(post in posts)
+
+      <div class="col-md-4"  > 
+          <img src="{{ post.image }}"  />
+      </div>
+      
+        <div class="post-preview" >
+           <a href="/{{ post._id }}">
+            <h2 class="post-title">
+              {{ post.title }}
+            </h2>
+          </a>
+
+          <p class="post-meta">Posted by
+            <a href="#">{{ post.username }}</a>
+            on {{ post.createdAt.toDateString() }}
+          </p>
+
+
+        </div>
+        <hr>
+      @endeach
+      <!-- Pager -->
+      <div class="clearfix">
+        <a class="btn btn-primary float-right" href="#">Older Posts &rarr;</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+ 
+<hr>
+@endsection

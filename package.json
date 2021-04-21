@@ -1,0 +1,35 @@
+{
+  "name": "artiobix",
+  "version": "1.0.0",
+  "description": "capstone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "project"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^3.2.0",
+    "express": "^4.17.1",
+    "express-edge": "^2.0.2",
+    "express-fileupload": "^1.2.1",
+    "express-session": "^1.17.1",
+    "mongodb": "^3.6.5",
+    "mongoose": "^5.12.2",
+    "startbootstrap-clean-blog": "^5.0.10"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}
