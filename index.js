@@ -1,3 +1,5 @@
+
+const mongoose = require('mongoose'); 
 const port = process.env.PORT || 8000;
 const path = require('path');
 const dotenv = require("dotenv");
@@ -5,7 +7,7 @@ const dotenv = require("dotenv");
 const { engine } = require('express-edge');
 const express = require('express');
 const edge = require("edge.js");
-const mongoose = require('mongoose'); 
+
 mongoose.set('useCreateIndex', true);
 const bodyParser = require('body-parser');
 dotenv.config()
@@ -57,6 +59,8 @@ app.use('*', (req, res, next) => {
   edge.global('auth', req.session.userId)
   next()
 });
+
+
 
 
 app.use(express.json());
