@@ -91,12 +91,15 @@ app.get('/contact', (req, res) => {
   app.get("/", homePageController);
   app.get("/post", createPostController);
   app.post("/store", storePostController);
-  app.get('/login',redirectIfAuthenticated, loginController);
+ 
   app.post('/log',redirectIfAuthenticated, loginUserController);
   app.get("/reg", redirectIfAuthenticated,createUserController);
   app.post("/user",redirectIfAuthenticated, storeUserController);
   app.get("/logout", logoutController);
+
+  app.get('/login',redirectIfAuthenticated, loginController);
   app.get("/:id", getPostController);
+ 
 
 
   
