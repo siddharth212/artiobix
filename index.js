@@ -34,6 +34,7 @@ const logoutController = require("./controllers/logout");
 
 
 
+
 const connectMongo = require('connect-mongo');
 
 
@@ -106,7 +107,8 @@ app.get('/about', (req, res) => {
 
   app.post("/user",redirectIfAuthenticated, storeUserController);
   app.get("/logout", logoutController);
-
+  
+  
 
 
 
