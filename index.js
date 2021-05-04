@@ -16,6 +16,11 @@ const fileUpload = require("express-fileupload");
 const expressSession = require('express-session');
 const Post = require('./database/models/Post');
 
+
+
+
+const contactMeController = require("./controllers/contactMe");
+const storeContactController = require("./controllers/storeContact");
 const createPostController = require('./controllers/createPost')
 const homePageController = require('./controllers/homePage')
 const storePostController = require('./controllers/storePost')
@@ -24,8 +29,11 @@ const createUserController = require("./controllers/createUser");
 const storeUserController = require('./controllers/storeUser');
 const loginController = require("./controllers/login");
 const loginUserController = require('./controllers/loginUser');
-
 const logoutController = require("./controllers/logout");
+
+
+
+
 const connectMongo = require('connect-mongo');
 
 
@@ -83,21 +91,25 @@ app.get('/about', (req, res) => {
   });
 
 
-app.get('/contact', (req, res) => {
-    
-    res.render('contact')
-  });
+
+  app.get("/contact", contactMeController);
+  app.post  ("/con", storeContactController);
 
   app.get("/", homePageController);
   app.get("/post", createPostController);
   app.post("/store", storePostController);
  
   app.post('/log',redirectIfAuthenticated, loginUserController);
+
+  app.get('/login',redirectIfAuthenticated, loginController);
   app.get("/reg", redirectIfAuthenticated,createUserController);
+
   app.post("/user",redirectIfAuthenticated, storeUserController);
   app.get("/logout", logoutController);
 
-  app.get('/login',redirectIfAuthenticated, loginController);
+
+
+
   app.get("/:id", getPostController);
  
 

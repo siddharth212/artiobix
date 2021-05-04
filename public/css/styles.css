@@ -1,0 +1,88 @@
+.row-header {
+  margin: 0px auto;
+  padding: 0px 0px;
+}
+.row-content {
+  margin: 0px auto;
+  padding: 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px;
+}
+.footer {
+  background-color: #90c1e2;
+  margin: 0px auto;
+  padding: 20px 0px;
+}
+.jumbtron {
+  margin-top: 75px ;
+  padding: 70px 30px;
+  background: #6a42ad;
+  color: rgb(241, 237, 229);
+}
+
+.jumbtron1 {
+  margin-top: 75px ;
+  padding: 40px 30px;
+  background: #040108;
+  color: rgb(241, 237, 229);
+}
+
+address {
+  font-size: 80%;
+  margin: 0px;
+  color: #0f0f0f;
+}
+body {
+  padding: 50px 0px 0px 0px;
+  z-index: 0;
+}
+.navbar-dark {
+  background-color: #000000;
+}
+.tab-content {
+  border-left: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+.carousel {
+  background: #512DA8;
+}
+.carousel .carousel-item {
+  height: 300px;
+}
+.carousel .carousel-item img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-height: 300px;
+}
+#carouselButton {
+  right: 0px;
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+}
+
+
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 200px;
+  grid-auto-rows: 600px;
+}
+
+img:nth-child(6n),
+img:nth-child(6n + 1) {
+  grid-column: span 2;
+}
+
+.i {
+  border: 2px solid rgba(15, 1, 1, 0.945);
+  border-radius: 8px;
+  width: 400px;
+  height: 350px;
+}

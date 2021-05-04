@@ -7,21 +7,24 @@
   <meta name="description" content="">
   <meta name="author" content="">
   <link rel="icon" type="image/svg+xml" href="https://example.com/image.svg">
-  <title>ARTIOBIX</title>
+    <title>ARTIOBIX</title>
  
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-growl/1.0.0/jquery.bootstrap-growl.min.js"></script>
   <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+      <link href="css/styles.css" rel="stylesheet">
+
+  
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <link href= 'css/clean-blog.css' rel="stylesheet" type='text/css'>
 
   <link href="css/team.css" rel="stylesheet">
 
-  <link href= 'css/style.css' rel="stylesheet" type='text/css'>
-
-   <link href= 'css/header.css' rel="stylesheet" type='text/css'>
+  <link href= 'css/header.css' rel="stylesheet" type='text/css'>
  
   <!-- Custom fonts for this template -->
   <link href="/static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -34,95 +37,118 @@
 </head>
  
 <body>
-  
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+
+  <nav class="navbar navbar-dark navbar-expand-sm fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">ARTIOBIX</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        Menu
-        <i class="fa fa-bars"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto">
-        
-          <li class="nav-item">
-            <a class="nav-link" href="/">Home</a>
-          </li>
-          
-          <li class="nav-item">
-            <a class="nav-link" href="/post">New Post</a>
-          </li>
-           @if(!auth)
-    <li class="nav-item">
-      <a class="nav-link" href="/login">Login</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="/reg">Register</a>
-    </li>
-  @else
-    <li class="nav-item">
-      <a class="nav-link" href="/logout">Logout</a>
-    </li>
-  @endif
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+      <a class="navbar-brand" href="#"><img src="img/globe-grid.png" height="30" width="41">ARTOBIX</a>
+      <ul class="navbar-nav mr-auto">
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav mr-auto"> </ul>
 
-          <li class="nav-item">
-            <a class="nav-link" href="/about">About</a>
-          </li>
 
-          <li class="nav-item">
-            <a class="nav-link" href="/contact">Contact</a>
-          </li>
-        </ul>
-      </div>
+       <li class="nav-item active"><a class="nav-link" href="/"><span class="fa fa-home fa-lg"></span> Home</a></li>
+       <li class="nav-item"><a class="nav-link" href="/post"><span class="fa fa-list fa-lg"></span> New Post</a></li>
+       <li class="nav-item"><a class="nav-link" href="/about"><span class="fa fa-info fa-lg"></span> About Us</a></li>
+       <li class="nav-item"><a class="nav-link" href="/contact"><span class="fa fa-address-card fa-lg"></span> Contact Us</a></li>
+
+
+                 </ul>
+                  @if(!auth)
+                    <span class="navbar-text">
+                      <a class ="nav-link" href ="/login">
+                      <span class="fa fa-sign-in"></span> Login</a>
+                    </span>
+                    <span class="navbar-text">
+                      <a class ="nav-link" href ="/reg">
+                      <span class="fa fa-sign-in"></span> Register</a>
+                    </span>
+                  @else
+                    <span class="navbar-text">
+                      <a class ="nav-link" href ="/logout">
+                      <span class="fa fa-sign-in"></span>Logout</a>
+                    </span>
+                  @endif
+
+        </ul> 
     </div>
   </nav>
+
+
+  
+ 
  
   @!section('content')
  
-  
+  <footer class="footer">
+    <div class="container">
+        <div class="row">             
+            <div class="col-md-4 col-sm-2">
+                <h5>Links</h5>
+                <ul class="list-unstyled">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/post">New Post</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="col-md-4 col-sm-2">
+              <h5>Company</h5>
+              <ul class="list-unstyled">
+                 
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Affiliate Programs</a></li>
+                 
+              </ul>
+          </div>
+            
+          <div class="col-md-4 align-self-center">
+          
+            <div class="text-center">
+              <h5>Follow Us On</h5>
+              <a href="https://twitter.com/el_alturas" class="btn btn-social-icon btn-twitter" target="_blank">
+                <span class="fa-stack fa-lg">
+              <i class="fa fa-square-o fa-stack-2x"></i>
+              <i class="fa fa-twitter fa-stack-1x"></i>
+            </span>
+              </a>
+              <a href="https://youtube.com/el_alturas" class="btn btn-social-icon btn-youtube" target="_blank">
+                <span class="fa-stack fa-lg">
+              <i class="fa fa-square-o fa-stack-2x"></i>
+              <i class="fa fa-youtube-square fa-stack-1x"></i>
+            </span>
+              </a>
+
+              <a href="https://facebook.com/el_alturas" class="btn btn-social-icon btn-facebook" target="_blank">
+                <span class="fa-stack fa-lg">
+              <i class="fa fa-square-o fa-stack-2x"></i>
+              <i class="fa fa-facebook-square fa-stack-1x"></i>
+            </span>
+              </a>
+
+              <a href="https://linkedin.com/el_alturas" class="btn btn-social-icon btn-linkedin" target="_blank">
+                <span class="fa-stack fa-lg">
+              <i class="fa fa-square-o fa-stack-2x"></i>
+              <i class="fa fa-linkedin-square fa-stack-1x"></i>
+            </span>
+              </a>
+            </div>
+
+        </div>
+       </div>
+       <div class="row justify-content-center">             
+            <div class="col-auto">
+                <p>© Copyright 2021 Artiobix</p>
+            </div>
+       </div>
+    </div>
+</footer>
   
     
 
 
-<footer class="footer">
-  	 <div class="container">
-  	 	<div class="row">
-  	 		<div class="footer-col">
-  	 			<h4>company</h4>
-  	 			<ul>
-  	 				<li><a href="#">about us</a></li>
-  	 				<li><a href="#">our services</a></li>
-  	 				
-  	 				<li><a href="program.html">affiliate program</a></li>
-  	 			</ul>
-  	 		</div>
-  	 		<div class="footer-col">
-  	 			<h4>get help</h4>
-  	 			<ul>
-  	 				<li><a href="#">FAQ</a></li>
-  	 			
-  	 				
-  	 			</ul>
-  	 		</div>
-  	 		
-         <div class="footer-col">
-  	 			<h4>follow us</h4>
-  	 			<div class="social-links">
-  	 				<a href="https://www.facebook.com/"><i class="fa fa-facebook-f"></i></a>
-  	 				<a href="https://twitter.com/?lang=en-in"><i class="fa fa-twitter"></i></a>
-  	 				<a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
-  	 				<a href="https://in.linkedin.com/"><i class="fa fa-linkedin"></i></a>
-  	 			</div>
-  	 		</div>
-
-         
-  	 		
-  	 	</div>
-       
-  	 </div>
-     
-  </footer>
 
 
 
@@ -130,7 +156,11 @@
 
 
 
-
+<script>
+  function myFunction() {
+    alert("I am an alert box!");
+  }
+  </script>
 
 
 
@@ -144,9 +174,30 @@
   <!-- Custom scripts for this template -->
   <script src="js/clean-blog.min.js"></script>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
 </body>
- 
+ <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
+ <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+ <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+ <script>
+  $("#carouselButton").click(function(){
+           if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+               $("#mycarousel").carousel('pause');
+               $("#carouselButton").children("span").removeClass('fa-pause');
+               $("#carouselButton").children("span").addClass('fa-play');
+           }
+           else if ($("#carouselButton").children("span").hasClass('fa-play')){
+               $("#mycarousel").carousel('cycle');
+               $("#carouselButton").children("span").removeClass('fa-play');
+               $("#carouselButton").children("span").addClass('fa-pause');                    
+           }
+       });
+</script>
+
+
+
+
 </html>
