@@ -9,11 +9,12 @@
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="post-heading" >
               <h1>{{ post.description }}</h1>
-
+              <div class ="row1">
                 <span class="meta">Posted by
                 <a href="#">{{ post.username }}</a>
                 on {{ post.createdAt.toDateString() }}
                 </span>
+              </div>
 
             </div>
           </div>
@@ -31,24 +32,38 @@
         <div class="row">
 
            <div class="col-lg-10">
-
-              <h class ="big">{{ post.title }}</h>
+            <div class="row2">
+              <h>{{ post.title }}</h>
+            </div>  
+              <div class="row1">
                <img class="i1" src="{{ post.image }}"/>
+              </div>
                 <div class="post-preview" >
-                   <a href="/{{ post._id }}">
-                     <h2 class="post-title">
+                  <div class="row2">
+                  <h>Product Details</h>
+                  </div>
+                  <div class="row1">
+                    
+                   
                       {{ post.content }}
-                     </h2>
-                   </a>
+                     
+                  </div>
   
-                
-                   <a class="btn btn-primary" href="{{ post.Link }}">Click Here To Buy Now</a>
-                
+                  <div class="row1">
+                    <div class="row1">
+                   <div class="row2">
+                    <h>Price</h>
+                   
+                      {{ post.price }}
+                    </div>
+                  </div>
+                   <a class="btn btn-primary" href="{{ post.Link }}">View Or Click Here To Buy Now</a>
+                  </div>
                 </div>
            </div>
           
         </div>
 </div>
 </article>
-    <hr>
+    
 @endsection
